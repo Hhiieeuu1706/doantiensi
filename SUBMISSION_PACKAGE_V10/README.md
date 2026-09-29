@@ -1,0 +1,7 @@
+# Battery RUL submission package
+
+This package contains the locked protocol, selected reproducibility code, manifests, figures, results, supplementary E1–E11 audit and the current thesis draft. V8 frozen results and the HUST final-untouched set are preserved. The package does not claim numerical SOTA, universal RF superiority over deep models, production BMS readiness or universal history sufficiency.
+
+The current thesis is `05_manuscript/BATTERY_RUL_PHD_THESIS_V28_READER_GUIDE_FINAL.docx`. V28 preserves V27 and adds a first-time-reader guide, glossary, four question-answer summaries and a simple online replay example before the main Introduction. Frozen results and labels are unchanged. Raw HUST data are intentionally not included. Use `02_code/ingestion/download_hust_raw_v1.ps1` and verify SHA-256 against `03_data_manifests/HUST_RAW_MANIFEST_V1.csv`. Use `02_code/ingestion/make_data_quality_figures_v18.py` or `make_publication_figures_v19.py` to regenerate the scale-aware and publication-quality figures.
+
+Current English/Vietnamese pair: `05_manuscript/BATTERY_RUL_PHD_THESIS_V29_12_STEP_FINAL.docx` and `05_manuscript/BATTERY_RUL_PHD_THESIS_V29_VIETNAMESE_12_STEP_FINAL.docx`. Both explicitly use the same 12-stage research route, including literature-gap mapping, protocol registration, leakage audit, domain-shift analysis and claim control. The Vietnamese file translates the core English content and uses the same frozen values and artifacts.

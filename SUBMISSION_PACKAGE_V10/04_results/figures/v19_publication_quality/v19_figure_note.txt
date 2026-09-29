@@ -1,0 +1,1 @@
+The dense all-battery plot was replaced by an overview without a 50-item legend and a four-cell small-multiple detail figure. All values and quality flags are computed from the same audited discharge table; no labels or frozen metrics were changed.

@@ -1,0 +1,16 @@
+{
+  "device_id": "pack_id",
+  "cycle": "cycle_index",
+  "capacity_ah": "estimated_capacity_ah",
+  "soh": "soh",
+  "duration_s": "discharge_duration_s",
+  "energy_wh": "discharge_energy_wh",
+  "throughput_ah": "discharge_ah",
+  "temperature_mean_c": "temperature_mean_c",
+  "temperature_max_c": "temperature_max_c",
+  "temperature_rise_c": "temperature_rise_c",
+  "voltage_mean_v": "voltage_mean_v",
+  "voltage_drop_v": "voltage_drop_v",
+  "current_mean_a": "current_mean_a",
+  "current_std_a": "current_std_a"
+}

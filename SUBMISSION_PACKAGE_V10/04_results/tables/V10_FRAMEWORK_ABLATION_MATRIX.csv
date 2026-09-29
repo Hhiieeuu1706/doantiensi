@@ -1,0 +1,5 @@
+framework_version,LOBO,separate_calibration,external_holdout,censoring_aware,uncertainty_width,evidence_status,interpretation
+Conventional random-cycle baseline,No,No,No,No,No,not rerun,reference failure mode
+Leakage-controlled,Yes,No,No,Yes,No,available,controls battery leakage
+Leakage + calibration,Yes,Yes,No,Yes,Yes,available,adds interval calibration
+Full framework,Yes,Yes,Yes,Yes,Yes,available,external research prototype

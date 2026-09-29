@@ -1,0 +1,5 @@
+model,n_seeds,seeds,max_epoch,convergence_status
+GRU,5,"11,22,33,44,55",30,preliminary_fixed_epoch
+LSTM,5,"11,22,33,44,55",30,preliminary_fixed_epoch
+TCN,5,"11,22,33,44,55",30,preliminary_fixed_epoch
+Transformer,5,"11,22,33,44,55",30,preliminary_fixed_epoch

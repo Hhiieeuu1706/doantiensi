@@ -1,0 +1,12 @@
+{
+  "protocol_lock_created": true,
+  "canonical_schema_created": true,
+  "v8_frozen_preserved": true,
+  "final_hust_tuning_prohibited": true,
+  "rul_ablation_available": true,
+  "fair_rf_xgb_available": true,
+  "deep_convergence_available": true,
+  "rf_sequential_replay_available": true,
+  "literature_benchmark_available": true,
+  "full_deep_family_quality_gate": "pending_equal_tuning_and_LOBO_bootstrap"
+}

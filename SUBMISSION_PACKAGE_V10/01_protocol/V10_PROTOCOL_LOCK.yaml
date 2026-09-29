@@ -1,0 +1,13 @@
+protocol_id: battery-rul-v10-locked
+status: registered_before_new_experiments
+features: [capacity_ah, soh_initial, duration_s, voltage_v_mean, current_a_mean, temperature_c_mean, temperature_rise_c, capacity_lag1_ah, capacity_rolling_mean_5, capacity_rolling_slope_5, cumulative_energy_wh, discharge_cycle_index]
+eol: first_of_two_consecutive_cycles_below_75_percent_median_first_five_reference
+rul: N_EOL_minus_k
+split: battery_level_LOBO_then_HUST_46_development_15_calibration_16_final_untouched
+checkpoints: [0.2, 0.4, 0.6, 0.8]
+models: [RF, XGBoost, LSTM, GRU, TCN, small_Transformer]
+tuning_budget: 20_configurations_per_model; 5_neural_seeds
+early_stopping: max_150_epochs; patience_15; best_validation_checkpoint
+metrics: [MAE, RMSE, normalized_MAE, median_absolute_error, worst_battery, bootstrap_95CI, coverage, interval_width]
+bootstrap: 1000_battery_resamples; seed_2026
+prohibitions: [no_final_HUST_tuning, no_random_cycle_split, no_future_features]

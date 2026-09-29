@@ -1,0 +1,19 @@
+target,observation_horizon,comparison,paired_n,mean_mae_difference,median_mae_difference,wilcoxon_statistic,p_value_unadjusted,p_value_holm
+capacity_ah,1.0,G2_capacity_history vs G1_cycle_only,4,-0.045451362400179204,-0.048788921335220364,0.0,0.125,0.375
+capacity_ah,1.0,G3_VIT_statistics vs G1_cycle_only,4,-0.05215663166006046,-0.05788649981924811,0.0,0.125,0.375
+capacity_ah,1.0,G4_VIT_history vs G1_cycle_only,4,-0.05554320620032201,-0.061823682559214214,0.0,0.125,0.375
+rul_cycles,0.1,G2_capacity_history vs G1_cycle_only,3,3.3038373498874747,4.76257299159175,1.0,0.5,1.0
+rul_cycles,0.1,G3_VIT_statistics vs G1_cycle_only,3,-4.334084797826133,-1.2411443274658316,2.0,0.75,1.0
+rul_cycles,0.1,G4_VIT_history vs G1_cycle_only,3,-4.268409651775391,-0.6161979177072912,2.0,0.75,1.0
+rul_cycles,0.2,G2_capacity_history vs G1_cycle_only,3,3.899885252037116,3.164367247062703,0.0,0.25,0.75
+rul_cycles,0.2,G3_VIT_statistics vs G1_cycle_only,3,-5.1381427087250096,-1.5395466294648088,0.0,0.25,0.75
+rul_cycles,0.2,G4_VIT_history vs G1_cycle_only,3,-4.165269828228026,-1.2215927022472393,0.0,0.25,0.75
+rul_cycles,0.4,G2_capacity_history vs G1_cycle_only,3,0.510478769148022,1.071156918930992,1.0,0.5,0.75
+rul_cycles,0.4,G3_VIT_statistics vs G1_cycle_only,3,-5.726206831622129,-3.307401413861472,0.0,0.25,0.75
+rul_cycles,0.4,G4_VIT_history vs G1_cycle_only,3,-3.816747582321059,-2.050909099958904,0.0,0.25,0.75
+rul_cycles,0.6,G2_capacity_history vs G1_cycle_only,3,-1.2580809127030428,-1.7237919409373283,0.0,0.25,0.75
+rul_cycles,0.6,G3_VIT_statistics vs G1_cycle_only,3,-4.675352041498421,-4.754870941879196,0.0,0.25,0.75
+rul_cycles,0.6,G4_VIT_history vs G1_cycle_only,3,-3.8886613419403617,-3.551633599763796,0.0,0.25,0.75
+rul_cycles,0.8,G2_capacity_history vs G1_cycle_only,3,-2.003125085895153,-2.019749035430106,0.0,0.25,0.75
+rul_cycles,0.8,G3_VIT_statistics vs G1_cycle_only,3,-3.423728641786061,-3.8212058894786534,0.0,0.25,0.75
+rul_cycles,0.8,G4_VIT_history vs G1_cycle_only,3,-3.686635811676774,-3.3596508979527666,0.0,0.25,0.75

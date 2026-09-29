@@ -1,0 +1,7 @@
+rows=2794
+incomplete_cycle_flag=38
+capacity_anomaly_flag=44
+observed_eol_among_incomplete=0
+energy_cumulative_max_Wh=1158.150
+energy_per_cycle_max_Wh=10.073
+duration_capacity_correlation=0.4558

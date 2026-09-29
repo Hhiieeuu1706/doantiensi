@@ -1,0 +1,9 @@
+test,passed,detail
+unique_battery_cycle_key,True,No duplicate discharge-cycle keys
+capacity_anomalies_accounted,True,44 missing/nonpositive capacity rows retained for audit and excluded from canonical modeling
+rul_definition,True,"RUL = max(EOL cycle - current cycle, 0)"
+b0007_censored,True,No fabricated B0007 RUL labels
+deep_test_batteries_only_lobo,True,Exactly three observed-EOL outer test batteries
+deep_checkpoints_locked,True,20/40/60/80% checkpoints only
+deep_ten_seed_ensemble,True,Every deep result uses 10 seeds
+all_deep_rul_nonnegative,True,No negative deep RUL predictions

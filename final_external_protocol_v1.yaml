@@ -1,0 +1,44 @@
+{
+  "protocol_id": "final-external-hust-v1.0",
+  "status": "frozen-before-download",
+  "freeze_date": "2026-08-28",
+  "source": {
+    "dataset": "HUST",
+    "doi": "10.17632/nsc7hnsg4s.2",
+    "official_url": "https://data.mendeley.com/datasets/nsc7hnsg4s/2",
+    "chemistry": "LFP/graphite",
+    "nominal_capacity_ah": 1.1,
+    "temperature_c": 30,
+    "expected_cells": 77
+  },
+  "split": {
+    "method": "sort_by_sha256(protocol_id + ':' + battery_id)",
+    "development_fraction": 0.60,
+    "calibration_fraction": 0.20,
+    "final_untouched_fraction": 0.20,
+    "final_labels_access_policy": "forbidden_until_development_and_calibration_model_is_frozen"
+  },
+  "labels": {
+    "eol_definition": "first_of_two_consecutive_cycles_below_fraction_of_reference_capacity",
+    "reference_capacity": "median_first_5_valid_cycles",
+    "eol_fraction": 0.75,
+    "censored_policy": "no fabricated RUL; exclude from point-RUL metrics"
+  },
+  "frozen_inputs": {
+    "feature_set": "HI-RUL-core-v3.1",
+    "nasa_model": "TCN-online-v1-developmental",
+    "checkpoint_fractions": [0.2, 0.4, 0.6, 0.8],
+    "zero_shot_precedes_adaptation": true,
+    "missing_temperature_policy": "training-fold median plus missing indicator",
+    "normalization": "capacity/reference_capacity; current/reference_capacity; cycle log scale"
+  },
+  "acceptance": {
+    "mae_improvement_vs_strong_baseline": 0.10,
+    "checkpoints_better": 3,
+    "coverage_low": 0.85,
+    "coverage_high": 0.95,
+    "minimum_checkpoint_coverage": 0.80,
+    "maximum_width_to_mean_true_rul": 1.0,
+    "physical_valid_rate": 1.0
+  }
+}

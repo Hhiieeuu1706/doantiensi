@@ -1,0 +1,48 @@
+{
+  "protocol_id": "battery-rul-protocol-v3.0",
+  "status": "locked-development",
+  "created_date": "2026-08-27",
+  "primary_nasa": {
+    "battery_ids": ["B0005", "B0006", "B0007", "B0018"],
+    "observed_eol_metric_batteries": ["B0005", "B0006", "B0018"],
+    "censored_batteries": ["B0007"],
+    "eol_definition": "absolute_capacity_ah",
+    "eol_threshold_ah": 1.4,
+    "crossing_confirmation_cycles": 1,
+    "rul_formula": "max(eol_cycle-current_cycle,0)",
+    "soh_reference": "median_first_5_valid_capacity_gt_0.5Ah"
+  },
+  "cross_dataset": {
+    "eol_definition": "relative_reference_capacity",
+    "eol_threshold_fraction": 0.75,
+    "reference_capacity": "median_first_5_valid_discharge_cycles",
+    "crossing_confirmation_cycles": 2,
+    "note": "Never pool absolute-1.4Ah and relative-75pct results in one metric."
+  },
+  "evaluation": {
+    "outer_split": "leave_one_battery_out",
+    "inner_selection": "leave_one_training_battery_out",
+    "random_cycle_split_allowed": false,
+    "checkpoint_fractions": [0.2, 0.4, 0.6, 0.8],
+    "deep_seed_count": 10,
+    "seed_registry": [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035],
+    "history_rule": "features at prediction k may use current partial signal and completed information through k-1 only unless input_set is after_cycle",
+    "transformer_rule": "imputation_scaling_selection_and_calibration_fit_on_training_fold_only"
+  },
+  "acceptance": {
+    "minimum_mae_improvement_vs_strong_baseline": 0.10,
+    "minimum_checkpoints_better": 3,
+    "nominal_interval_coverage": 0.90,
+    "acceptable_coverage_low": 0.85,
+    "acceptable_coverage_high": 0.95,
+    "minimum_checkpoint_coverage": 0.80,
+    "maximum_mean_interval_width_to_mean_true_rul": 1.0,
+    "physical_valid_rate": 1.0,
+    "maximum_online_rul_jump_cycles": 15.0
+  },
+  "reporting": {
+    "required_metrics": ["mae", "rmse", "signed_bias", "coverage", "mean_interval_width", "interval_score"],
+    "required_slices": ["battery", "checkpoint", "early_mid_late", "overprediction_underprediction"],
+    "external_result_policy": "report_pass_and_fail_results_without_post_test_model_selection"
+  }
+}

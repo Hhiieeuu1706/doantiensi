@@ -1,0 +1,4 @@
+claim,evidence,safe_wording
+RF is best,lowest mean LOBO MAE in V8,best among evaluated models under this protocol
+History improves RUL,direct RUL ablation pending,hypothesis only
+Uncertainty reliable,"100% coverage, wide intervals",coverage-valid but conservative

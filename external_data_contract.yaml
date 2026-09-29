@@ -1,0 +1,26 @@
+version: 1
+dataset: CALCE_CS2_35_36_37_38
+source_url: https://web.calce.umd.edu/batteries/data/
+source_dataset: CALCE
+common_schema:
+  battery_id: string
+  cycle_index: integer, one-based after chronological deduplication
+  operation_type: discharge
+  time_s: seconds within source test session
+  voltage_v: volts
+  current_a: amperes; discharge negative
+  temperature_c: optional; missing for CS2_35-38
+  capacity_ah: maximum cumulative Discharge_Capacity(Ah) in cycle
+  ambient_temperature_c: unavailable
+  protocol_id: CALCE_CS2_1C_2p7V
+eol:
+  reference_capacity: median of first 5 valid discharge cycles
+  threshold_fraction: 0.75
+  crossing_confirmation_cycles: 2
+  censored_rule: no confirmed crossing observed
+leakage_rules:
+  - raw files are immutable
+  - cycle ordering uses source timestamps only
+  - reference capacity uses first 5 cycles only
+  - external test statistics never fit NASA zero-shot preprocessing
+  - battery-level splits only

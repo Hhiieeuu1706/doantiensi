@@ -1,0 +1,2 @@
+rows=2794; batteries=34; mean_rul=39.09 cycles
+capacity range=0.000–2.640 Ah

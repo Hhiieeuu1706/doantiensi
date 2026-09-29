@@ -1,0 +1,4 @@
+domain,role,cells_or_records,status,claim_boundary
+NASA PCoE,development / LOBO,4 cells; 3 observed EOL,nested LOBO completed,primary within-domain evidence
+HUST,external holdout,77 cells; 46 dev / 15 cal / 16 final,final evaluation frozen,external-domain after development-only adaptation
+CALCE,external feature audit,cycle-feature records available,no final RUL label protocol locked,cannot claim external RUL generalization yet
